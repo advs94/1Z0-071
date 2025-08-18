@@ -1,0 +1,36 @@
+1. True.
+2. True.
+3. 1) missing comma between last name and annual salary fields.
+   2) sal field doesn't exist in employees table (sal could be replaced by salary to avoid the error).
+   3) invalid character 'x' between sal and 12 ('x' must be replaced by '*' to multiply).
+   4) annual salary alias is invalid since alias with whitespace need to be enclosed with double quotation marks. whitespace could also be replaced by '_' character to avoid the error without enclosing the alias with double quotation marks.
+4. DESC departments;
+   SELECT *
+     FROM departments;
+5. a. DESC employees;
+   b. SELECT employee_id,
+             last_name,
+             job_id,
+             hire_date startdate
+        FROM employees;
+6. SELECT DISTINCT job_id
+     FROM employees;
+7. SELECT employee_id AS "Emp #",
+          last_name AS "Employee",
+          job_id AS "Job",
+          hire_date AS "Hire Date"
+     FROM employees;
+8. SELECT last_name || ', ' || job_id AS "Employee and Title"
+     FROM employees;
+9. SELECT employee_id || ', ' ||
+          first_name || ', ' ||
+          last_name || ', ' ||
+          email || ', ' ||
+          phone_number || ', ' ||
+          job_id || ', ' ||
+          manager_id || ', ' ||
+          hire_date || ', ' ||
+          salary || ', ' ||
+          commision_pct || ', ' ||
+          department_id AS the_output
+     FROM employees;
