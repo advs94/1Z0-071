@@ -6,4 +6,4 @@
 
 | # | Title | Solution |
 |---| ----- | -------- |
-|1|Introduction|[SQL](./solutions/sql/src/Introduction.txt)|
+|1|Introduction|[SQL](./solutions/sql/src/1_Introduction.txt)|
