@@ -6,4 +6,4 @@
 
 | # | Title | Solution |
 |---| ----- | -------- |
-|1|Introduction|[SQL](./solutions/sql/src/1_Introduction.txt)|
+|2|Retrieving Data using the SQL SELECT Statement|[SQL](./solutions/sql/2/src/solution.txt)|
