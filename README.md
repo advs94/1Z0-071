@@ -8,3 +8,4 @@
 |---| ----- | -------- |
 |1|Introduction|N/A|
 |2|Retrieving Data using the SQL SELECT Statement|[SQL](./solutions/sql/2/src/solution.txt)|
+|3|Restricting and Sorting Data|[SQL](./solutions/sql/3/src/solution.txt)|
