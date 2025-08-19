@@ -1,4 +1,4 @@
-1Z0-071
+[1Z0-071](https://mylearn.oracle.com/ou/course/oracle-database-19c-sql-workshop/105208/)
 ========
 
 ### Preparation to obtain an Oracle Database SQL Certified Associate credential. 
