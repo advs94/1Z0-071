@@ -11,3 +11,4 @@
 |3|Restricting and Sorting Data|[SQL](./solutions/sql/3/src/solution.txt)|
 |4|Using Single-Row Functions to Customize Output|[SQL](./solutions/sql/4/src/solution.txt)|
 |5|Using Conversion Functions and Conditional Expressions|[SQL](./solutions/sql/5/src/solution.txt)|
+|6|Reporting Aggregated Data Using the Group Functions|[SQL](./solutions/sql/6/src/solution.txt)|
