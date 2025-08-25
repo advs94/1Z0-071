@@ -1,0 +1,36 @@
+1. CREATE TABLE dept (
+     id NUMBER(7) CONSTRAINT dept_pk PRIMARY KEY,
+     name VARCHAR2(25)
+   );
+   DESC dept;
+2. CREATE TABLE emp (
+     id NUMBER(7),
+     last_name VARCHAR2(25),
+     first_name VARCHAR2(25),
+     dept_id NUMBER(7) CONSTRAINT emp_dept_fk REFERENCES dept (id)
+   )
+   DESC emp;
+3. ALTER TABLE emp ADD commision NUMBER(2,2);
+   DESC emp;
+4. ALTER TABLE emp MODIFY last_name VARCHAR2(50);
+   DESC emp;
+5. ALTER TABLE emp DROP COLUMN first_name;
+   DESC emp;
+6. ALTER TABLE emp SET UNUSED(dept_id);
+   DESC emp;
+7. ALTER TABLE emp DROP UNUSED COLUMNS;
+8. CREATE TABLE employees2 AS
+     SELECT employee_id AS id,
+            first_name,
+            last_name,
+            salary,
+            department_id AS dept_id
+       FROM employees;
+   DESC employees2;
+9. ALTER TABLE employees2 READ ONLY;
+10. TRUNCATE TABLE employees2;
+11. ALTER TABLE employees2 READ WRITE;
+    TRUNCATE TABLE employees2;
+12. DROP TABLE emp;
+    DROP TABLE dept;
+    DROP TABLE employees2;
