@@ -1,0 +1,45 @@
+1. DESC my_employee;
+2. INSERT INTO my_employee
+   VALUES (1, 'Patel', 'Ralph', 'rpatel', 895);
+3. INSERT INTO my_employee (id, last_name, first_name, userid, salary)
+   VALUES (2, 'Dancs', 'Betty', 'bdancs', 860);
+4. SELECT *
+     FROM my_employee;
+5. INSERT INTO my_employee
+   VALUES (&id, '&last_name', '&first_name', '&userid', &salary);
+6. N/A
+7. SELECT *
+     FROM my_employee;
+8. COMMIT;
+9. UPDATE my_employee
+      SET last_name = 'Drexler'
+    WHERE id = 3;
+10. UPDATE my_employee
+       SET salary = 1000
+     WHERE salary < 900;
+11. SELECT *
+      FROM my_employee;
+12. DELETE
+      FROM my_employee
+     WHERE last_name = 'Dancs';
+13. SELECT *
+      FROM my_employee;
+14. COMMIT;
+15. N/A
+16. SELECT *
+      FROM my_employee;
+17. SAVEPOINT s1;
+18. DELETE
+      FROM my_employee;
+19. SELECT *
+      FROM my_employee;
+20. ROLLBACK TO s1;
+21. SELECT *
+      FROM my_employee;
+22. COMMIT;
+23. INSERT INTO my_employee
+    VALUES (&id, '&&last_name', '&&first_name', LOWER(SUBSTR('&first_name', 1, 1) || SUBSTR('&last_name', 1, 7)), &salary);
+24. N/A
+25. SELECT *
+      FROM my_employee
+     WHERE id = 6;
