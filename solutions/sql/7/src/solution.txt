@@ -1,0 +1,70 @@
+1. SELECT location_id,
+          street_address,
+          city,
+          state_province,
+          country_name
+     FROM locations
+    NATURAL JOIN countries;
+2. SELECT last_name,
+          department_id,
+          department_name
+     FROM employees
+    INNER JOIN departments
+    USING (department_id);
+3. SELECT e.last_name,
+          e.job_id,
+          e.department_id,
+          d.department_name
+     FROM employees e
+    INNER JOIN departments e
+    USING (deparment_id)
+    INNER JOIN locations l
+    USING (location_id)
+    WHERE l.city = 'Toronto';
+4. SELECT emp.last_name AS "Employee",
+          emp.employee_id AS "Emp#",
+          mng.last_name AS "Manager",
+          emp.manager_id AS "Mgr#"
+     FROM employees emp
+    INNER JOIN employees mng
+       ON emp.manager_id = mng.employee_id;
+5. SELECT emp.last_name AS "Employee",
+          emp.employee_id AS "Emp#",
+          mng.last_name AS "Manager",
+          emp.manager_id AS "Mgr#"
+     FROM employees emp
+    LEFT OUTER JOIN employees mng
+       ON emp.manager_id = mng.employee_id
+    ORDER BY 2;
+6. SELECT emp.department_id AS department,
+          emp.last_name AS employee,
+          clg.last_name AS colleague
+     FROM employees emp
+    INNER JOIN employees clg
+       ON emp.department_id = clg.department_id
+    WHERE emp.employee_id <> clg.employee_id;
+7. DESC job_grades;
+   SELECT e.last_name,
+          e.job_id,
+          d.department_name,
+          e.salary,
+          jg.grade_level
+     FROM employees e
+    INNER JOIN departments d
+    USING (department_id)
+    INNER JOIN job_grades jg
+       ON e.salary BETWEEN jg.lowest_sal AND jg.highest_sal;
+8. SELECT e.last_name,
+          e.hire_date
+     FROM employees e
+    INNER JOIN employees d
+       ON d.last_name = 'Davies'
+    WHERE e.hire_date > d.hire_date;
+9. SELECT e.last_name,
+          e.hire_date,
+          m.last_name AS manager,
+          m.hire_date as "Manager_hire_date"
+     FROM employees e
+    INNER JOIN employees m
+       ON e.manager_id = m.employee_id
+    WHERE e.hire_date < m.hire_date;
