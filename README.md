@@ -14,3 +14,4 @@
 |6|Reporting Aggregated Data Using the Group Functions|[SQL](./solutions/sql/6/src/solution.txt)|
 |7|Displaying Data from Multiple Tables Using Joins|[SQL](./solutions/sql/7/src/solution.txt)|
 |8|Using Subqueries to Solve Queries|[SQL](./solutions/sql/8/src/solution.txt)|
+|9|Using Set Operators|[SQL](./solutions/sql/9/src/solution.txt)|
