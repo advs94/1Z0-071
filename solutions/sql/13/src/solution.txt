@@ -1,0 +1,39 @@
+1. CREATE TABLE dept (
+     id NUMBER(7) CONSTRAINT dept_id_pk PRIMARY KEY,
+     name VARCHAR2(25)
+   );
+   DESCRIBE dept;
+2. CREATE SEQUENCE dept_id_seq IS
+     START WITH 200
+     INCREMENT BY 10
+     MAXVALUE 1000;
+3. INSERT INTO dept
+   VALUES (dept_seq.nextval, 'Education');
+   INSERT INTO dept
+   VALUES (dept_seq.nextval, 'Administration');
+4. SELECT sequence_name,
+          max_value,
+          increment_by,
+          last_number
+     FROM user_sequences;
+5. CREATE SYNONYM emp1 FOR employees;
+   SELECT synonym_name,
+          table_owner,
+          table_name,
+          db_link,
+          origin_con_id
+     FROM user_synonyms;
+6. DROP SYNONYM emp1;
+7. CREATE INDEX dept_name_idx ON dept (name);
+8. CREATE TABLE sales_dept (
+     team_id NUMBER(3) CONSTRAINT sales_pk_idx PRIMARY KEY,
+     location VARCHAR2(30)
+   );
+   SELECT index_name,
+          table_name,
+          uniqueness
+     FROM user_indexes
+    WHERE index_name = 'SALES_PK_IDX';
+9. DROP TABLE sales_dept;
+   DROP SEQUENCE dept_seq;
+   DROP TABLE dept;

@@ -18,3 +18,4 @@
 |10|Managing Tables Using DML Statements|[SQL](./solutions/sql/10/src/solution.txt)|
 |11|Introduction to Data Definition Language|[SQL](./solutions/sql/11/src/solution.txt)|
 |12|Introduction to Data Dictionary Views|[SQL](./solutions/sql/12/src/solution.txt)|
+|13|Creating Sequences, Synonyms, and Indexes|[SQL](./solutions/sql/13/src/solution.txt)|
