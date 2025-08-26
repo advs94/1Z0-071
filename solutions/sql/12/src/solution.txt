@@ -1,0 +1,40 @@
+1. SELECT table_name
+     FROM user_tables;
+2. SELECT table_name,
+          owner
+     FROM all_tables
+    WHERE owner <> 'ORA21';
+3. SELECT column_name,
+          data_type,
+          data_length,
+          data_precision AS precision,
+          data_scale AS scale,
+          nullable
+     FROM user_tab_cols
+    WHERE table_name = UPPER('&tab_name');
+4. SELECT ucc.column_name,
+          uc.constraint_name,
+          uc.constraint_type,
+          uc.search_condition,
+          uc.status
+     FROM user_constraints uc
+    INNER JOIN user_cons_columns ucc
+       ON uc.table_name = ucc.table_name
+      AND uc.constraint_name = ucc.constraint_name
+    WHERE ucc.table_name = UPPER('&tab_name');
+5. COMMENT ON TABLE departments IS 'Company department information including name, code and location.';
+   SELECT comments
+     FROM user_tab_comments
+    WHERE table_name = 'DEPARTMENTS';
+6. N/A
+7. SELECT table_name
+     FROM user_tables
+    WHERE table_name IN ('DEPT2', 'EMP2');
+8. SELECT constraint_name,
+          constraint_type
+     FROM user_constraints
+    WHERE table_name IN ('DEPT2', 'EMP2');
+9. SELECT object_name,
+          object_type
+     FROM user_objects
+    WHERE object_name IN ('DEPT2', 'EMP2');
