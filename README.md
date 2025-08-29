@@ -20,3 +20,4 @@
 |12|Introduction to Data Dictionary Views|[SQL](./solutions/sql/12/src/solution.txt)|
 |13|Creating Sequences, Synonyms, and Indexes|[SQL](./solutions/sql/13/src/solution.txt)|
 |14|Creating Views|[SQL](./solutions/sql/14/src/solution.txt)|
+|15|Managing Schema Objects|[SQL](./solutions/sql/15/src/solution.txt)|
